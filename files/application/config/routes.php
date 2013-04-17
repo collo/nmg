@@ -49,8 +49,6 @@ $route['^logout$'] = 'users/logout';
 
 $route['^outlets/(:num)$'] = 'outlets/index/$1';
 
-$route['^feedback/(:num)$'] = 'outlets/index/$1';
-
 $route['^users/(:num)$'] = 'users/index/$1';
 
 $route['^feedback/(:num)$'] = 'feedback/index/$1';
