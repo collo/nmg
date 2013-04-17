@@ -12,19 +12,19 @@ class Feedback extends My_Controller {
   }
 
   public function index($id = '') {
-    $this->__showView('');
+    $this->__showMsg('feedback');
   }
 
   public function add() {
-    
+    $this->__showMsg('feedback add ');
   }
 
   public function edit($id) {
-    
+    $this->__showMsg('feedback edit');
   }
 
   public function del($id) {
-    
+    $this->__showMsg('feedback del');
   }
 
 }

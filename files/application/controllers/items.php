@@ -1,9 +1,8 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+if (!defined('BASEPATH'))
+  exit('No direct script access allowed');
+
 
 class Items extends My_Controller {
 
@@ -12,19 +11,19 @@ class Items extends My_Controller {
   }
 
   public function index($id = '') {
-    $this->__showView('');
+    $this->__showMsg('items');
   }
 
   public function add() {
-    
+    $this->__showMsg('items add');
   }
 
   public function edit($id) {
-    
+    $this->__showMsg('items add');
   }
 
   public function del($id) {
-    
+    $this->__showMsg('items del');
   }
 
 }

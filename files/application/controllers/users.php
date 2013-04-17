@@ -5,26 +5,26 @@
  * and open the template in the editor.
  */
 
-class Login extends CI_Controller {
+class Login extends My_Controller {
 
   public function __construct() {
     parent::__construct();
   }
 
   public function index() {
-    $this->load->view('login');
+    $this->__showView('');
   }
 
   public function add() {
-    
+
   }
 
   public function edit($id) {
-    
+
   }
 
   public function del($id) {
-    
+
   }
 
 }

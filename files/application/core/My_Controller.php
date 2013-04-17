@@ -3,7 +3,7 @@
 if (!defined('BASEPATH'))
   exit('No direct script access allowed');
 
-abstract class My_Controller extends CI_Controller {
+class My_Controller extends CI_Controller {
 
   /** an array of groups allowed to access this page */
   protected $ACCESS_LEVELS;
@@ -18,7 +18,7 @@ abstract class My_Controller extends CI_Controller {
     parent::__construct();
     $this->load->library('session');
     $this->load->helper(array('url', 'msg', 'form', 'session_vars'));
-    $this->load->model('usermodel');
+    $this->load->model('user_model');
     $this->ACCESS_LEVELS = is_array($level) ? $level : array('1');
   }
 
@@ -48,14 +48,17 @@ abstract class My_Controller extends CI_Controller {
    * @param String $title Title of the page
    * @param Array $body_args Arguments given to the body of the page
    */
-  protected function __showView($view, $title = '', $body_args = array()) {
+  protected function __showView($view, $body_args = array()) {
     if ($this->__is_logged_in()) {
       $this->__refresh_user();
     }
+    //$this->load->view('html_head');
+    //$this->load->view($view, $body_args);
+    //$this->load->view('html_foot');
+  }
 
-    $this->load->view('html_head');
-    $this->load->view($view, $body_args);
-    $this->load->view('html_foot');
+  protected function __showMsg($s) {
+    echo $s;
   }
 
   protected function __usrid() {
@@ -95,11 +98,17 @@ abstract class My_Controller extends CI_Controller {
     redirect(site_url('user/logout'));
   }
 
-  protected abstract function add();
+  protected function add() {
+    
+  }
 
-  protected abstract function edit();
+  protected function edit() {
+    
+  }
 
-  protected abstract function del();
+  protected function del() {
+    
+  }
 
   protected function csv_to_array($csv) {
     return (($csv == '' | $csv == null) ? array() : explode(',', $csv));
