@@ -12,7 +12,7 @@ class Login extends My_Controller {
   }
 
   public function index() {
-    $this->__showView('');
+    $this->__showView('login');
   }
 
   public function add() {

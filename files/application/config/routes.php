@@ -43,7 +43,7 @@ if (!defined('BASEPATH'))
 
 $route['default_controller'] = "login";
 $route['404_override'] = '';
-
+$route['welcome/login']='welcome/login';
 $route['^login$'] = 'users/login';
 $route['^logout$'] = 'users/logout';
 
