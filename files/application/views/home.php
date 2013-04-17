@@ -3,29 +3,20 @@
 <div class="container">
 <div class="row">
 <div class="span3">
-    <h4>Dashboard</h4>
+    <h4>News Dashboard</h4>
     <div class="sidebar">
         <ul class="col-nav span3">
-            <li><a href="index.html#bookmarks" data-toggle="collapse" class="accordion-toggle"><span class="label label-inverse pull-right">3 </span>Bookmarks</a></li>
-            <li id="bookmarks" class="collapse">
-                <ul>
-                    <li><a href="index.html#"> <i class="pull-right icon-plane"></i>Flights</a><a href="index.html#"> <i class="pull-right icon-fire"></i>Fires</a><a href="index.html#"> <i class="pull-right icon-comment"></i>Comments</a></li>
-                </ul>
-            </li>
-            <li><a href="index.html#metrics" data-toggle="collapse" class="accordion-toggle"> <span class="label label-inverse pull-right">2</span>Metrics</a></li>
-            <li id="metrics" class="collapse">
-                <ul>
-                    <li><a href="index.html#"> <i class="pull-right icon-signal"></i>Stats</a><a href="index.html#"> <i class="pull-right icon-fire"></i>Fires</a></li>
-                </ul>
-            </li>
-            <li><a href="index.html#"> <i class="pull-right icon-cog"></i>Settings</a></li>
-            <li><a href="index.html#"> <i class="pull-right icon-star"></i>Extra</a></li>
-            <li><a href="http://wbpreview.com/profile.html"><i class="pull-right icon-user"></i>Profile</a></li>
+
+             <li><a href="<?php echo base_url().'index.php/items/add';?>"> <i class="pull-right icon-plane"></i>Add News</a></li>
+            <li><a href="<?php echo base_url().'index.php/items/edit';?>"> <i class="pull-right icon-plane"></i>Edit News</a></li>
+            <li><a href="<?php echo base_url().'index.php/items/delete';?>"> <i class="pull-right icon-plane"></i>Delete News</a></li>
+            <li><a href="<?php echo base_url().'index.php/items/publish';?>"> <i class="pull-right icon-plane"></i>Publish  News</a></li>
+
         </ul>
     </div>
 </div>
 <div class="span9">
-<h4 class="header">Sales</h4>
+<h4 class="header">Welcome to Nation Media Group</h4>
 <div id="d3" style="width: 100%; margin-top: -30px"></div><br/>
 <div class="row-fluid">
     <div class="span3 knob">
@@ -346,31 +337,5 @@
 </div>
 </div>
 </div>
-</div><script type="text/javascript">
-    (function() {
-        var delay;
-
-        delay = function(ms, func) {
-            return setTimeout(func, ms);
-        };
-
-        toastr.options = {
-            positionClass: 'toast-bottom-left'
-        };
-
-        delay(1000, function() {
-            return toastr.success('Have fun storming the castle!', 'Miracle Max Says');
-        });
-
-        delay(1500, function() {
-            return toastr.warning('My name is Inigo Montoya. You Killed my father, prepare to die!');
-        });
-
-        delay(2000, function() {
-            return toastr.error('I do not think that word means what you think it means.', 'Inconceivable!');
-        });
-
-    }).call(this);
-</script>
 </div>
 </div>

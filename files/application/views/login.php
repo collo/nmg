@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="description" content="description of your site">
     <meta name="author" content="author of the site">
-    <title>IndustryApp Template</title>
+    <title>Nation Media Group</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>components/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>components/bootstrap/css/bootstrap-responsive.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>components/bootstrap/css/fonts.css">
@@ -30,12 +30,8 @@
         <div class="row">
             <div class="span12">
                 <ul class="pull-right">
-                    <li><a href="#">Link1</a></li>
-                    <li><a href="#">Link2</a></li>
-                    <li><a href="#">Link3</a></li>
-                    <li><a href="login.html">Login</a></li>
                 </ul><a id="logo" href="index.html">
-                <h4>My<strong>Admin</strong></h4></a>
+                <h4>Nation<strong>Media Group</strong></h4></a>
             </div>
         </div>
     </div>
@@ -45,9 +41,11 @@
         <div class="span6 offset2">
             <div class="login">
                 <form class="form-horizontal">
+                 <?php $attr=array('class'=>'form_horizontal');?>
+                <?php echo form_open('users/login',$attr);?>
                     <div class="control-group">
                         <div class="controls">
-                            <h4>Login</h4>
+                            <h4><strong>Login</strong></h4>
                         </div>
                     </div>
                     <div class="control-group">
@@ -63,13 +61,12 @@
                         </div>
                     </div>
                     <div class="control-group">
-                        <div class="controls"><a href="index.html" class="btn">Login</a></div>
+                        <div class="controls"><input type='submit' class="btn" value="Login"/></div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
-</body><script>protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://'; address = protocol + window.location.host + window.location.pathname + '/ws'; socket = new WebSocket(address);
-socket.onmessage = function(msg) { msg.data == 'reload' && window.location.reload() }</script>
+</body>
 </html>
