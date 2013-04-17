@@ -41,7 +41,7 @@ if (!defined('BASEPATH'))
   |
  */
 
-$route['default_controller'] = "login";
+$route['default_controller'] = "users";
 $route['404_override'] = '';
 
 $route['^login$'] = 'users/login';
@@ -56,6 +56,7 @@ $route['^users/(:num)$'] = 'users/index/$1';
 $route['^feedback/(:num)$'] = 'feedback/index/$1';
 
 $route['^items/(:num)$'] = 'items/index/$1';
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
 

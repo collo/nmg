@@ -1,31 +1,27 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+if (!defined('BASEPATH'))
+  exit('No direct script access allowed');
 
-class Login extends My_Controller {
+class Users extends My_Controller {
 
   public function __construct() {
     parent::__construct();
   }
 
   public function index() {
-    $this->__showView('');
+    $this->__showMsg('users');
   }
 
-  public function add() {
-    
-  }
+  public function add() { $this->__showMsg('users add');}
 
-  public function edit($id) {
-    
-  }
+  public function edit($id) { $this->__showMsg('users edit');}
 
-  public function del($id) {
-    
-  }
+  public function del($id) { $this->__showMsg('users del');}
+
+  public function login() { $this->__showMsg('users login');}
+
+  public function logout() { $this->__showMsg('users logout');}
 
 }
 
